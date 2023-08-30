@@ -1,6 +1,7 @@
 package com.desafio.Services;
 
 import com.desafio.Entity.Valores;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -44,7 +45,6 @@ public class ServiceValores {
     private Double calcMediana(List<Double> valores){
         Double resultado;
         int mediana;
-
         Collections.sort(valores);
 
         if (valores.size() %2 == 0){
@@ -59,7 +59,6 @@ public class ServiceValores {
             double tamanho = Math.floor((valores.size()/2));
             resultado = valores.get((int) tamanho);
         }
-
             return resultado;
     }
 
@@ -74,7 +73,7 @@ public class ServiceValores {
             soma += diferenca * diferenca;
         }
 
-        double variancia = soma / (valores.size() - 1);
+        double variancia = soma / (valores.size());
         return Math.sqrt(variancia);
     }
 
