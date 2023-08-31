@@ -16,7 +16,7 @@ public class TestCalculos {
 
     @Test
     public void testMedia(){
-        for(int i = 1; i < 21 ; i++){
+        for(int i = 1; i <= 20 ; i++){
             valores.add((double) i);
         }
         Assertions.assertEquals(10.5, service.calcMedia(valores) );
@@ -24,7 +24,7 @@ public class TestCalculos {
 
     @Test
     public void testMediana(){
-        for(int i = 1; i < 21 ; i++){
+        for(int i = 1; i <= 20 ; i++){
             valores.add((double) i);
         }
         Assertions.assertEquals(10.5, service.calcMediana(valores));
@@ -32,11 +32,33 @@ public class TestCalculos {
 
     @Test
     public void testDesvPadrao(){
-        for(int i = 1; i < 21 ; i++){
+        for(int i = 1; i <= 20 ; i++){
             valores.add((double) i);
         }
         Assertions.assertEquals(5.766281297335398, service.calcDesvPadrao(valores));
     }
 
+    @Test
+    public void testValorMax(){
+        for(int i = 1; i <= 20 ; i++){
+            valores.add((double) i);
+        }
+        Assertions.assertEquals(20.0, service.valorMax(valores));
+    }
 
+    @Test
+    public void testValorMin(){
+        for(int i = 1; i <= 20 ; i++){
+            valores.add((double) i);
+        }
+        Assertions.assertEquals(1.0, service.valorMin(valores));
+    }
+
+    @Test
+    public void testSoma(){
+        for(int i = 1; i <= 20 ; i++){
+            valores.add((double) i);
+        }
+        Assertions.assertEquals(210, service.calcSoma(valores));
+    }
 }

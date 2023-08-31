@@ -76,6 +76,24 @@ public class ServiceValores {
         return Math.sqrt(variancia);
     }
 
+
+    public Double calcSoma(List<Double> valores){
+        Double soma = 0.0;
+        for (Double valore : valores) {
+            soma += valore;
+        }
+        return soma;
+    }
+
+    public Double valorMax(List<Double> valores){
+        Collections.sort(valores);
+        return valores.get(valores.size()-1);
+    }
+
+    public Double valorMin(List<Double> valores){
+        Collections.sort(valores);
+        return valores.get(0);
+    }
 }
 
 
