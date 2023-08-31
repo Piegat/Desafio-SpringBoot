@@ -26,7 +26,6 @@ public class ServiceValores {
     }
 
     public Double calcMedia(List<Double> valores){
-        Double resultado;
         int tamanho = valores.size();
         Double soma = 0.0;
         Double auxiliar;
@@ -42,7 +41,7 @@ public class ServiceValores {
         return soma;
     }
 
-    private Double calcMediana(List<Double> valores){
+    public Double calcMediana(List<Double> valores){
         Double resultado;
         int mediana;
         Collections.sort(valores);
